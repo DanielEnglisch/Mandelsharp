@@ -4,15 +4,9 @@ namespace Mandelsharp
 {
     public class Mandelbrot
     {
-      public static byte[] Generate(int size)
+      public static byte[] Generate(decimal dx, decimal dy, int iterations, decimal zoom, int size)
         {
             byte[] data = new byte[size * size * 3];
-
-            int iterations = 2000;
-            decimal dx = (decimal)-0.04524074130409;
-            decimal dy = (decimal)0.9868162207157838;
-            decimal zoom = (decimal)5E-12;
-
 
             for (int x = 0; x < size; x++)
             {
@@ -45,7 +39,7 @@ namespace Mandelsharp
 
                 }
 
-                //Console.WriteLine("Column " + x + "/" + size);
+               Console.WriteLine("Column " + x + "/" + size);
             }
 
 
